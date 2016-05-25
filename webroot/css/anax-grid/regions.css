@@ -1,0 +1,32 @@
+#header,
+#navbar,
+#flash,
+#footer {
+  background-color: lightgrey;
+}
+
+#main {
+  background-color: lightgrey;
+}
+
+#sidebar {
+  background-color: lightgrey;
+}
+
+#featured-1,
+#featured-2,
+#featured-3,
+#triptych-1,
+#triptych-2,
+#triptych-3 {
+  background-color: lightgrey;
+}
+
+#footer-col-1,
+#footer-col-2,
+#footer-col-3,
+#footer-col-4 {
+  background-color: lightgrey;
+}
+
+

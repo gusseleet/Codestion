@@ -1,0 +1,5 @@
+[TIME: 03.05.2016 - 11:19:30] - [LEVEL: USER_WARNING] - [MESSAGE: hej] - [IN: C:\Users\gel\Dropbox\Skola\DBWEBB\phpmvc\me\kmom05\Anax-MVC\webroot\index.php] - [ROW: 19]
+[TIME: 03.05.2016 - 11:19:31] - [LEVEL: USER_WARNING] - [MESSAGE: hej] - [IN: C:\Users\gel\Dropbox\Skola\DBWEBB\phpmvc\me\kmom05\Anax-MVC\webroot\index.php] - [ROW: 19]
+[TIME: 03.05.2016 - 19:47:44] - [LEVEL: USER_WARNING] - [MESSAGE: hej] - [IN: C:\Users\Gustav\Dropbox\Skola\DBWEBB\phpmvc\me\kmom05\Anax-MVC\webroot\index.php] - [ROW: 19]
+[TIME: 03.05.2016 - 19:47:59] - [LEVEL: USER_WARNING] - [MESSAGE: hej] - [IN: C:\Users\Gustav\Dropbox\Skola\DBWEBB\phpmvc\me\kmom05\Anax-MVC\webroot\index.php] - [ROW: 19]
+[TIME: 11.05.2016 - 08:00:59] - [LEVEL: USER_WARNING] - [MESSAGE: hej] - [IN: C:\Users\Gustav\Dropbox\Skola\DBWEBB\phpmvc\me\kmom10\Anax-MVC\webroot\index.php] - [ROW: 19]

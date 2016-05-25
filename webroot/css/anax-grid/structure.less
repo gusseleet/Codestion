@@ -1,0 +1,336 @@
+/**
+ * General elements
+ */
+
+body {
+  color: #333;
+  font-family: arial, sans-serif;
+  overflow-y: scroll;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+/**
+ * Layout of the main page elements
+ */
+#wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  .clearfix();
+}
+
+
+/**
+ * Layout for header
+ */
+#header {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.sitetitle {
+  position: absolute;
+  top: 6px;
+  left: 130px;
+  font-size: 100px;
+  margin-left: 5%;
+  margin-top: 1.5%;
+  color: black;
+}
+
+.siteslogan {
+  position: absolute;
+  top: 65px;
+  left: 130px;
+  font-style: italic;
+  color: #666;
+  float: right;
+}
+
+.sitelogo {
+width: 20%;
+  height: 20%;
+}
+
+/**
+ * Layout for main
+ */
+#main {
+  min-height: 5em;
+}
+
+
+/**
+ * Layout for footer
+ */
+#footer {
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  padding-top: 22px;
+}
+
+.sitefooter {
+  color: #666;
+}
+
+
+/**
+ * For articles
+ */
+.article1 {
+  width: 700px;
+  border-right: 1px solid #ccc;
+  padding-right: 1em;
+}
+
+
+.rank {
+  margin: 0;
+  display: inline-block;
+}
+
+.markdown {
+  display: inline-block;
+  margin: 0;
+}
+
+.byline {
+  margin-top: 44px;
+  border-top: 1px dashed #ccc;
+  padding-top: 22px;
+  color: #666;
+}
+
+.byline p {
+  margin-top: 0;
+}
+
+
+#navbar {
+  margin-bottom: 44px;
+}
+
+.navbar {}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  border-top: 4px solid transparent;
+  color: #333;
+  position: relative;
+}
+
+.navbar a {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.navbar li:hover {
+  color: #666;
+}
+
+.navbar li.selected-parent,
+.navbar li.is-parent,
+.navbar li.selected {
+  color: #07c;
+}
+
+.navbar ul ul {
+  background-color: #fff;
+  padding: 8px;
+  position: absolute;
+  left: -9999px;
+  z-index: 2;
+}
+
+.navbar li li {
+  border-top: none;
+  border-left: 4px solid transparent;
+}
+
+.navbar li:hover ul {
+  left: 0;
+}
+
+
+.navbar li li.selected {
+  color: #07c;
+  border-color: #07c;
+}
+
+/* Just to sho off how class works */
+.navbar li .italic {
+  font-style: italic;
+}
+
+
+
+#header,
+#navbar,
+#flash,
+#footer {
+  .column(@columns);
+  margin-bottom: 22px;
+  min-height: 5em;
+}
+
+#main {
+  .column(@columns / 3 * 2);
+  margin-bottom: 22px;
+}
+
+#sidebar {
+  .column(@columns / 3);
+  margin-bottom: 22px;
+  min-height: 5em;
+}
+
+#featured-1,
+#featured-2,
+#featured-3,
+#triptych-1,
+#triptych-2,
+#triptych-3 {
+  .column(@columns / 3);
+  margin-bottom: 22px;
+  min-height: 5em;
+}
+
+#footer-col-1,
+#footer-col-2,
+#footer-col-3,
+#footer-col-4 {
+  .column(@columns / 4);
+  margin-bottom: 22px;
+  min-height: 5em;
+}
+
+#wrap-featured,
+#wrap-main,
+#wrap-triptych,
+#wrap-footer-col {
+  .clearfix();
+
+}
+
+
+.voteButtons {
+
+  color: black;
+  text-decoration: none;
+}
+
+
+.input_container input {
+  height: 20px;
+  width: 200px;
+  padding: 3px;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+}
+.input_container ul {
+  width: 206px;
+  border: 1px solid #eaeaea;
+  position: absolute;
+  z-index: 9;
+  background: #f3f3f3;
+  list-style: none;
+}
+.input_container ul li {
+  padding: 2px;
+}
+.input_container ul li:hover {
+  background: #eaeaea;
+}
+#country_list_id {
+  display: none;
+}
+
+.commentsToAnswers{
+
+  margin-left: 5%;
+}
+
+.comments{
+  margin-top: 5%;
+}
+
+.answers{
+  opacity: 0.25;
+}
+
+.tagsListAll{
+
+  background-color: #e1ecf4;
+  text-decoration: none;
+  padding: .4em .5em;
+  color: #39739d;
+  font-size: 12px;
+}
+
+.tagsListAll:hover{
+
+  background-color: #cee0ed;
+}
+
+.bodyMain {
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  padding: 0;
+  padding-bottom: 5px;
+  margin: 0;
+  color: #3b4045;
+  font-size: 13px;
+  margin-top: 1.1em;
+}
+
+.questionTitle{
+
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  color: #07c;
+  line-height: 1.3;
+
+}
+
+.userTitle{
+
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #07c;
+  line-height: 1.3;
+
+}
+
+.edit{
+  text-decoration: none;
+  color: #07c;
+}
+
+.questionTitle:visited {
+
+  color: #005999;
+}
+
+.profileText{
+  padding-top: 3%;
+}
+
+.gravatar {
+  border-radius: 50%;
+}
+
+

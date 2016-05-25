@@ -1,0 +1,152 @@
+/** ------------------------------------------------------------------
+ * Mixins
+ */
+
+
+/** ------------------------------------------------------------------
+ * The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.clearfix() {
+  *zoom:1;
+  &:before, &:after {
+    content:"";display:table;
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+
+/** ------------------------------------------------------------------
+ * Wrap elements to site width in grid layout
+ */
+.wrap(@extra-width: 0) {
+  width: @total-width + @extra-width;
+  margin: 0 auto;
+  .clearfix();
+}
+
+
+/** ------------------------------------------------------------------
+ * Always show the scrollbar
+ */
+.alwaysShowScrollbar() {
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
+
+/** ------------------------------------------------------------------
+ * Typography. Calculate font-size and line-height.
+ */
+.body-font() {
+  //font: @font-size/(@magic-number/@font-size) @@font-family-body;
+   font: 100.01%/(unit((@magicNumber)/unit(@fontSizeBody))) @fontFamilyBody;
+}
+
+.font-size(@fontSize) {
+  font-size: @fontSize;
+}
+
+.font-size(@fontSize) when (@fontSize > 1) and ((@fontSize * @fontSizeBody) < @magicNumber) {
+  line-height: unit(@magicNumber/(@fontSize*@fontSizeBody));
+}
+
+.font-size(@fontSize) when (@fontSize > (@magicNumber/@fontSizeBody)) and ((@fontSize*@fontSizeBody) > @magicNumber) and ((@fontSize*@fontSizeBody) < (@magicNumber*2)) {
+  line-height: unit(@magicNumber*2/(@fontSize*@fontSizeBody));
+}
+
+
+// 5/4 for smaller font-size, incremental leading.
+
+
+/** ------------------------------------------------------------------
+ * Anchors.
+ */
+.anchor-none(@color: inherit) {
+  a {
+    color: @color;
+    text-decoration: none;
+  }
+}
+
+.anchor-anonymous(@color: inherit, @hover: @anchorColorHover) {
+  a {
+    color: @color;
+    text-decoration: none;
+    &:hover {
+      color: @hover;
+      text-decoration: underline;
+    }
+  }
+}
+
+.anchor(@color: inherit, @hover: inherit, @visited: inherit) {
+  a {
+    color: @color;
+    text-decoration: underline;
+    &:visited {
+      color: @visited;
+    }
+    &:hover {
+      color: @hover;
+      text-decoration: none;
+    }
+  }
+}
+
+.make-row(@gutter: @grid-gutter-width) {
+  // Then clear the floated columns
+  .clearfix();
+
+  @media (min-width: @screen-sm-min) {
+    margin-left:  (@gutter / -2);
+    margin-right: (@gutter / -2);
+  }
+
+  // Negative margin nested rows out to align the content of columns
+  .row {
+    margin-left:  (@gutter / -2);
+    margin-right: (@gutter / -2);
+  }
+}
+
+/*.link-no-style(){
+  a{color:inherit;text-decoration:none;
+    &:hover{color:@anchorColor;text-decoration:underline;}
+  }
+}*/
+
+
+// Utilities
+@import "mixins/hide-text.less";
+@import "mixins/opacity.less";
+@import "mixins/image.less";
+@import "mixins/labels.less";
+@import "mixins/reset-filter.less";
+@import "mixins/resize.less";
+@import "mixins/responsive-visibility.less";
+@import "mixins/size.less";
+@import "mixins/tab-focus.less";
+@import "mixins/reset-text.less";
+@import "mixins/text-emphasis.less";
+@import "mixins/text-overflow.less";
+@import "mixins/vendor-prefixes.less";
+
+// Components
+@import "mixins/alerts.less";
+@import "mixins/buttons.less";
+@import "mixins/panels.less";
+@import "mixins/pagination.less";
+@import "mixins/list-group.less";
+@import "mixins/nav-divider.less";
+@import "mixins/forms.less";
+@import "mixins/progress-bar.less";
+@import "mixins/table-row.less";
+
+// Skins
+@import "mixins/background-variant.less";
+@import "mixins/border-radius.less";
+@import "mixins/gradients.less";
+
+
